@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Calc" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="v6R-Si-4Dc">
+                                <rect key="frame" x="15" y="59" width="384" height="120"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cVR-8e-6PN">
+                                        <rect key="frame" x="0.0" y="0.0" width="184.66666666666666" height="120"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CVB-rU-3gs">
+                                        <rect key="frame" x="199.66666666666663" y="0.0" width="184.33333333333337" height="120"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="8VT-Ij-UdP"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3M6-U3-tLr">
+                                <rect key="frame" x="15" y="194" width="384" height="60"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="h9S-Y6-2Zn"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="process:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a0e-gT-TDB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="3M6-U3-tLr" firstAttribute="top" secondItem="v6R-Si-4Dc" secondAttribute="bottom" constant="15" id="0nR-Td-5dy"/>
+                            <constraint firstItem="3M6-U3-tLr" firstAttribute="trailing" secondItem="v6R-Si-4Dc" secondAttribute="trailing" id="7JG-pM-itp"/>
+                            <constraint firstItem="v6R-Si-4Dc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="LDg-u6-lR4"/>
+                            <constraint firstItem="3M6-U3-tLr" firstAttribute="leading" secondItem="v6R-Si-4Dc" secondAttribute="leading" id="Su0-Ac-P3r"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="v6R-Si-4Dc" secondAttribute="trailing" constant="15" id="lCi-5P-DS1"/>
+                            <constraint firstItem="v6R-Si-4Dc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="yH0-nZ-ls6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="btn" destination="3M6-U3-tLr" id="yJj-Fs-bIE"/>
+                        <outlet property="leftField" destination="cVR-8e-6PN" id="ZCH-GJ-NC4"/>
+                        <outlet property="rightField" destination="CVB-rU-3gs" id="f7B-f5-3ll"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-57.971014492753625" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Date0215" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="aeG-HW-e8l">
+                                <rect key="frame" x="0.0" y="44" width="414" height="216"/>
+                                <connections>
+                                    <action selector="dateChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="wcK-r9-k4Y"/>
+                                </connections>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="El3-Ye-Rj8">
+                                <rect key="frame" x="171.5" y="321" width="71" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="선택한 날짜 부터 100일 후는" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xXv-vx-CpE">
+                                <rect key="frame" x="110.5" y="270" width="193" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="El3-Ye-Rj8" firstAttribute="top" secondItem="xXv-vx-CpE" secondAttribute="bottom" constant="30" id="1tB-tH-bJ0"/>
+                            <constraint firstItem="xXv-vx-CpE" firstAttribute="top" secondItem="aeG-HW-e8l" secondAttribute="bottom" constant="10" id="6iM-Tf-gpI"/>
+                            <constraint firstItem="aeG-HW-e8l" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="M03-IU-FD6"/>
+                            <constraint firstItem="xXv-vx-CpE" firstAttribute="top" secondItem="aeG-HW-e8l" secondAttribute="bottom" constant="10" id="Xpa-DQ-rbv"/>
+                            <constraint firstItem="aeG-HW-e8l" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="adx-IW-iV1"/>
+                            <constraint firstItem="aeG-HW-e8l" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="dUW-eh-ugs"/>
+                            <constraint firstItem="El3-Ye-Rj8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ogD-qS-WDU"/>
+                            <constraint firstItem="xXv-vx-CpE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="y7Z-hZ-QPx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="resultLabel" destination="El3-Ye-Rj8" id="FH5-Ys-wNe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="138"/>
+        </scene>
+    </scenes>
+</document>
